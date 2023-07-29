@@ -1,13 +1,362 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  height: 97vh;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#root {
+  margin: 10px 20px;
+}
+
+/* For Google icon */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.navbar img {
+  position: absolute;
+  top: 10px;
+  left: -5px;
+  height: 70px;
+}
+
+.navbar .icon span {
+  position: absolute;
+  top: 23px;
+  left: 70px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.searchBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  padding: 5px 10px;
+  border: 1px solid black;
+  margin-right: 20px;
+  margin-top: 15px;
+}
+
+.searchBox input {
+  height: 30px;
+  width: 300px;
+  border: none;
+}
+
+.searchBox input[type="text"]:focus {
+  outline: none !important;
+}
+
+.searchBox button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Navbar END */
+
+/* Feed */
+.feedContainer {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+/* Videos  */
+
+.videosContainer {
+  margin-left: 30px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.videosContainer header {
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.videosContainer header span {
+  color: red;
+  margin-left: 7px;
+}
+
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Video Card */
+.cardContainer,
+.channelCardContainer {
+  margin-right: 30px;
+  margin-bottom: 50px;
+  width: 358px;
+}
+.cardContainer img,
+.channelCardContainer img {
+  height: 275px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.cardContainer .cardTitle {
+  width: 100%;
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: large;
+}
+.cardContainer .cardChannel {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 10px;
+  font-weight: lighter;
+  color: rgb(48, 48, 48);
+  font-size: small;
+}
+span.icon-fill {
+  margin-left: 3px;
+  font-size: large;
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+/* Video Card END */
+
+/* video END */
+
+/* Channel Card */
+.channelCardContainer {
+  display: flex;
+  flex-direction: column;
+  width: 328px;
+  justify-content: center;
+  align-items: center;
+}
+
+.channelCardContainer .channelTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.channelCardContainer .subscribers {
+  text-align: center;
+}
+/* Channel Card END */
+
+/* SideBar */
+
+.sideBarContainer {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  border-right: 2px solid rgba(0, 0, 0, 0.103);
+  padding-right: 2 0px;
+}
+
+.category-btn:hover {
+  background-color: #fc1503 !important;
+  color: white !important;
+}
+
+.category-btn:hover span {
+  color: white !important;
+}
+
+.category-btn {
+  font-weight: bold !important;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  background: transparent;
+  outline: none;
+  border: none;
+
+  padding: 7px 50px 7px 25px;
+  margin: 10px 10px;
+  margin-left: 0;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.category-btn .icon {
+  margin-right: 15px;
+  color: red;
+}
+.category-btn .title {
+  margin-left: 15px;
+}
+
+/* SideBar END */
+
+/* Feed END */
+
+/* Channel Page */
+.channelPageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 100px;
+}
+/* Channel Page END */
+
+/* Video Details  */
+
+.videoDetailsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.videoDetailsContainer .videos .cardContainer {
+  margin-bottom: 10px;
+}
+
+.videoDetailsContainer .videoPlayerContainer {
+  width: 70%;
+}
+
+.videoDetailsContainer .videos {
+  flex-direction: column;
+  margin-left: 10px;
+} 
+
+.videoPlayingDetails {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.videoPlayingDetails .videoPlayingTitle {
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.videoPlayingDetails .videoStatistics {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.videoPlayingDetails .videoStatistics .likes {
+  display: flex;
+  margin-right: 20px;
+}
+/* Video Details END */
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(114, 113, 113);
+  border-radius: 10px;
+  height: 200px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.react-player {
+  height: 77vh !important;
+  width: 100% !important;
+}
+
+@media screen and (max-width: 1360px) {
+  #root {
+    margin: 10px 10px;
+  }
+
+  .navbar {
+    width: 100%;
+  }
+
+  .navbar .searchBox {
+    width: 70%;
+    position: relative;
+    left: 100px;
+  }
+
+  .navbar .icon span {
+    display: none;
+  }
+
+  .feedContainer {
+    flex-direction: column;
+  }
+
+  .sideBarContainer {
+    flex-direction: row;
+    border: none;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin-bottom: 10px;
+  }
+
+  .sideBarContainer .category-btn {
+    padding: 10px 10px;
+    margin: 5px;
+  }
+
+  .sideBarContainer .category-btn .title {
+    margin-left: 5px;
+  }
+
+  .videosContainer {
+    margin-left: 0px;
+  }
+
+  .cardContainer {
+    margin-left: 0px;
+  }
+
+  .react-player {
+    height: 45vh !important;
+    width: 100%;
+  }
+
+  .videoDetailsContainer {
+    .videos {
+      width: 100%;
+      flex-direction: row;
+    }
+  }
+  .videoDetailsContainer .videoPlayerContainer {
+    width: 90%;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .category-btn {
+    margin: 10px;
+  }
 }
