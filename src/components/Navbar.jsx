@@ -12,7 +12,7 @@ const Navbar = () => {
             alt="error"
             style={{ width: "100px" }}
           />
-          <span>YouTube</span>
+          <span>YouTube1</span>
         </Link>
       </div>
       <SearchBar />
