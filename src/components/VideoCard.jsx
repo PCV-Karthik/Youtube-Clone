@@ -9,7 +9,7 @@ const VideoCard = ({
 }) => {
   return (
     <div className="cardContainer">
-      <Link to={videoId ? `/video/${videoId}` : {}}>
+      <Link to={videoId ? `/Youtube-Clone/video/${videoId}` : {}}>
         <img
           src={snippet?.thumbnails?.high?.url}
           className="card-img-top"

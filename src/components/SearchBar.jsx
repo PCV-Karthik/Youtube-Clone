@@ -8,7 +8,7 @@ const SearchBar = () => {
   const onSubmitHandler = (e)=>{
       e.preventDefault();
       if(searchTerm){
-        navigate(`/search/${searchTerm}`);
+        navigate(`/Youtube-Clone/search/${searchTerm}`);
         setSearchTerm('');
       }
   }

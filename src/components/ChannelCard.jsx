@@ -5,7 +5,7 @@ const ChannelCard = ({ channelDetail }) => {
   console.log(channelDetail);
   return (
     <div className="channelCardContainer">
-      <Link to={`/channel/${channelDetail?.id?.channelId}`}>
+      <Link to={`/Youtube-Clone/channel/${channelDetail?.id?.channelId}`}>
         <img
           src={channelDetail?.snippet?.thumbnails?.high?.url}
           alt={channelDetail?.snippet?.title}
