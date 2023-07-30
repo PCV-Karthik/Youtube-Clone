@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="icon">
-        <Link to="/">
+        <Link to="/Youtube-Clone">
           <img
             src="https://www.freepnglogos.com/uploads/youtube-logo-hd-8.png"
             alt="error"
